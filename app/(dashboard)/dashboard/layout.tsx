@@ -1,6 +1,4 @@
-import { AuthMessages } from "@/components/authentication/auth-messages"
-
-import "./globals.css"
+import "@/app/globals.css"
 
 export const metadata = {
   title: "Next.js",
@@ -15,10 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="flex h-screen flex-col items-center justify-center">
-          {children}
-        </main>
-        <AuthMessages />
+        <main>{children}</main>
       </body>
     </html>
   )
