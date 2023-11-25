@@ -9,10 +9,10 @@ export async function middleware(req: NextRequest) {
   const { data } = await supabase.auth.getSession()
 
   if (!data.session) {
-    return NextResponse.redirect(new URL("/", req.nextUrl).href)
+    return NextResponse.redirect(new URL("/login", req.nextUrl).href)
   }
 
   return res
 }
 
-export const config = { matcher: ["/manage/:path*"] }
+export const config = { matcher: ["/dashboard/:path*"] }
